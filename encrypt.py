@@ -32,11 +32,11 @@ for i in range(dim-1):
 
 B = np.dot(D1, D2)
 
-A = np.array([[1, 0, 0, 0, 0],
-              [1, 1, 0, 0, 0],
-              [1, 1, 1, 0, 0],
-              [1, 1, 1, 1, 0],
-              [1, 1, 1, 1, 1]])
+A = np.ones((dim, dim), dtype = int)
+for i in range(dim):
+    for j in range(dim):
+        if(i < j):
+            A[i, j] = 0
 
 BA = np.dot(B, A)
 
